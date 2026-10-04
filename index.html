@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickNotes App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>QuickNotes</h1>
+<input type="text" id="search" placeholder="Search notes...">
+<select id="categoryFilter">
+<option value="all">All</option>
+<option value="work">Work</option>
+<option value="personal">Personal</option>
+<option value="ideas">Ideas</option>
+</select>
+</header>
+<main>
+<section class="add-note">
+<textarea id="noteInput" placeholder="Write your note..." maxlength="200"></textarea>
+<select id="category">
+<option value="work">Work</option>
+<option value="personal">Personal</option>
+<option value="ideas">Ideas</option>
+</select>
+<button id="addBtn">Add Note</button>
+</section>
+<section id="notesContainer" class="notes-grid"></section>
+</main>
+<footer><p>QuickNotes &copy; 2026</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
