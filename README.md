@@ -18,7 +18,7 @@ I focused on what was asked but also added small things that help me:
 - It works on my phone too because I used flexbox and added media queries
 
 ### How I built it
-I didn't use any library, just plain HTML, CSS and JS because that's what we learned in week 2-4.
+I didn't use any library, just plain HTML, CSS and JS
 - For HTML I made sure every input has a label and the form has the IDs PLP asked for
 - For CSS I used flexbox to center everything and made cards for each note
 - For JS I keep all notes in an array, then save that array to localStorage so it doesn't disappear. I used textContent instead of innerHTML because we were taught that innerHTML is not safe
