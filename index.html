@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QuickNotes App</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-<h1>QuickNotes</h1>
-<input type="text" id="search" placeholder="Search notes...">
-<select id="categoryFilter">
-<option value="all">All</option>
-<option value="work">Work</option>
-<option value="personal">Personal</option>
-<option value="ideas">Ideas</option>
-</select>
-</header>
-<main>
-<section class="add-note">
-<textarea id="noteInput" placeholder="Write your note..." maxlength="200"></textarea>
-<select id="category">
-<option value="work">Work</option>
-<option value="personal">Personal</option>
-<option value="ideas">Ideas</option>
-</select>
-<button id="addBtn">Add Note</button>
-</section>
-<section id="notesContainer" class="notes-grid"></section>
-</main>
-<footer><p>QuickNotes &copy; 2026</p></footer>
-<script src="script.js"></script>
+  <header>
+    <h1>QuickNotes</h1>
+    <p>Simple notes with categories and search</p>
+  </header>
+
+  <main>
+    <section>
+      <form id="note-form">
+        <label for="note-input">New Note:</label>
+        <textarea id="note-input" placeholder="Type your note here..." required></textarea>
+        
+        <label for="note-category">Category:</label>
+        <select id="note-category">
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+          <option value="Study">Study</option>
+        </select>
+
+        <button type="submit">Add Note</button>
+        <p id="error-message" class="error"></p>
+      </form>
+    </section>
+
+    <section>
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Search notes...">
+      
+      <p id="note-count">0 notes</p>
+      
+      <ul id="notes-list"></ul>
+      
+      <button id="clear-all">Clear All Notes</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes App</p>
+  </footer>
 </body>
 </html>
